@@ -37,5 +37,6 @@ echo c5_f13 > d1/f13.txt
 git add .
 git commit -m "c5_f13"
 
-
-
+echo c6_f1 > f1.txt
+git add .
+git commit -m "c6_f1"
