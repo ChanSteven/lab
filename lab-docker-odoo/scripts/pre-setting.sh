@@ -11,3 +11,5 @@ export PGHOST PGPORT PGUSER PGPASSWORD
 
 adduser --system --quiet --shell=/bin/bash --home=$ODOO_HOME --gecos 'ODOO' --group $ODOO_USER
 chown -R $ODOO_USER:$ODOO_USER $ODOO_HOME
+chown -R $ODOO_USER:$ODOO_USER $ODOO_DATA
+chown -R $ODOO_USER:$ODOO_USER $ODOO_ADDONS
