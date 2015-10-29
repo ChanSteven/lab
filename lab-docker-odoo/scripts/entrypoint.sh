@@ -1,3 +1,3 @@
 #!/bin/bash
-./pre-setting.sh
+source ./pre-setting.sh
 su odoo -c /opt/odoo/odoo.py
