@@ -20,6 +20,7 @@ RUN pip install pip-accel
 
 COPY ./requirements.txt /
 RUN pip-accel install -r /requirements.txt
+RUN pip-accel install pyinotify # for odoo8
 
 VOLUME ["${ODOO_HOME}", "${ODOO_DATA}", "${ODOO_ADDONS}"]
 
