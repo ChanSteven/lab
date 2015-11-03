@@ -1,3 +1,3 @@
 #!/bin/bash
-source pre-setting.sh
+sh pre-setting.sh
 /bin/bash

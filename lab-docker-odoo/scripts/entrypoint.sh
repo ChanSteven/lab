@@ -1,3 +1,3 @@
 #!/bin/bash
-source ./pre-setting.sh
-su odoo -c /opt/odoo/odoo.py
+sh pre-setting.sh
+su odoo -c "sh /run-odoo.sh"
