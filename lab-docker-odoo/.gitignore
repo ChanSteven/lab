@@ -3,3 +3,6 @@ addons
 DATA
 ODOO
 requirements.txt
+preinstall-custom.sh
+requirements-custom.txt
+

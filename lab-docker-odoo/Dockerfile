@@ -22,6 +22,12 @@ COPY ./requirements.txt /
 RUN pip-accel install -r /requirements.txt
 RUN pip-accel install pyinotify # for odoo8
 
+COPY ./preinstall-custom.sh /
+RUN sh /preinstall-custom.sh
+
+COPY ./requirements-custom.txt /
+RUN pip-accel install -r /requirements-custom.txt
+
 VOLUME ["${ODOO_HOME}", "${ODOO_DATA}", "${ODOO_ADDONS}"]
 
 COPY ./openerp-server.conf /etc/odoo/
