@@ -18,6 +18,7 @@ docker build -t $IMAGE_NAME .
 docker run --rm --name $CONTAINER_NAME \
            -v $PWD/source:/opt/odoo \
            -v $PWD/ODOO:/var/lib/odoo \
+           -v $PWD/addons:/mnt/extra-addons \
            --link $DB_NAME:db \
            -p 8069:8069 \
            -i -t $IMAGE_NAME $cmd
