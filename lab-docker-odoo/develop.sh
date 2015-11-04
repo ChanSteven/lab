@@ -12,7 +12,7 @@ docker run -d -v $PWD/DATA:/var/lib/postgresql/data -e POSTGRES_USER=odoo -e POS
 cmd=/entrypoint.sh
 #cmd=/entrypoint-debug.sh
 
-cp ./source/requirements.txt .
+cmp --silent requirements.txt source/requirements.txt || cp ./source/requirements.txt .
 #docker rmi $IMAGE_NAME
 docker build -t $IMAGE_NAME .
 docker run --rm --name $CONTAINER_NAME \
