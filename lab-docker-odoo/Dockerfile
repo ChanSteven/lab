@@ -17,11 +17,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     node-clean-css \
     libxml2-dev libxslt1-dev build-essential libpq-dev libldap2-dev libsasl2-dev libssl-dev
 
-RUN apt-get install curl -y \
-    && curl -o wkhtmltox.deb -SL http://nightly.odoo.com/extra/wkhtmltox-0.12.1.2_linux-jessie-amd64.deb \
-    && echo '40e8b906de658a2221b15e4e8cd82565a47d7ee8 wkhtmltox.deb' | sha1sum -c - \
-    && dpkg --force-depends -i wkhtmltox.deb \
-    && apt-get -y install -f --no-install-recommends
+# command not found: 'wkhtmltopdf'
+RUN apt-get install curl wget -y
+RUN apt-get install -y build-essential xorg libssl-dev libxrender-dev gdebi xfonts-75dpi
+RUN curl -o wkhtmltox-0.12.2.1_linux-trusty-amd64.deb -SL https://3d38f849ea6eaa910a4aaf515d330bd56e5eeca2.googledrive.com/host/0B73yFF5VP2GQTzZBYi11QW5YQUE/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
+RUN dpkg -i wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
 
 RUN pip install pip-accel
 
