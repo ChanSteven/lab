@@ -9,7 +9,7 @@ echo PGPORT=$DB_PORT_5432_TCP_PORT            >> run-odoo.sh
 echo PGUSER=$DB_ENV_POSTGRES_USER             >> run-odoo.sh
 echo PGPASSWORD=$DB_ENV_POSTGRES_PASSWORD     >> run-odoo.sh
 echo "export PGHOST PGPORT PGUSER PGPASSWORD" >> run-odoo.sh
-echo "/opt/odoo/odoo.py -c /etc/odoo/openerp-server.conf" >> run-odoo.sh
+echo "/opt/odoo/odoo.py -c /etc/odoo/openerp-server.conf --update=all" >> run-odoo.sh
 
 adduser --system --quiet --shell=/bin/bash --home=$ODOO_HOME --gecos 'ODOO' --group $ODOO_USER
 chown -R $ODOO_USER:$ODOO_USER $ODOO_HOME
