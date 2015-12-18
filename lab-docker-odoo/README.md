@@ -2,6 +2,7 @@ Prerequisites
 ===============
 1. docker
 2. git clone https://github.com/odoo/odoo.git source
+3. cp preinstall-custom-sample.sh preinstall-custom.sh
 
 run postgres & odoo
 ===============
